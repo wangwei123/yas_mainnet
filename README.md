@@ -6,7 +6,7 @@ YAS超级节点搭建教程
 1.登录你的centos服务器，安装git，获取节点搭建脚本：
 
 ```shell
-#ssh登录centos服务器,IP换成你自己服务器的IP
+#ssh登录centos服务器,IP换成你自己的服务器IP
 ssh root@10.127.89.177
 
 #进入/opt目录
@@ -69,7 +69,7 @@ Private key: 5Jnsi2kW1XcU2Ee8yoKvtcbGumLt7pcj2AJoopLVsgSDHsbMRNx
 Public key: EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
 ```
 
-8.将上面5生成的私钥导入钱包：
+8.将上面步骤5生成的私钥导入钱包：
 
 ```shell
 cleos wallet import -n mywallet --private-key 5Jnsi2kW1XcU2Ee8yoKvtcbGumLt7pcj2AJoopLVsgSDHsbMRNx
@@ -97,7 +97,7 @@ provider_privatekey="节点私钥"
 #把节点公钥 改为 你在步骤7生成的私钥，例如:5Jnsi2kW1XcU2E...省略
 
 #修改完后按ESC键，然后输入:wq回车保存
-#可以输入命令如下命令查看脚本是否修改正和保存成功：
+#可以输入如下命令查看脚本是否修改正和保存成功：
 cat start_node.sh
 ```
 
@@ -135,7 +135,6 @@ tail -f nodeos.log
 
 ```shell
 #执行如下命令注册bp:
-cleos system regproducer yaspool.bp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
+cleos system regproducer yasyaspoolbp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
 ```
-
 
