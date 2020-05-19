@@ -6,7 +6,7 @@ YAS超级节点搭建教程
 1.登录你的centos服务器，安装git，获取节点搭建脚本：
 
 ```shell
-#ssh登录centos服务器
+#ssh登录centos服务器,IP换成你自己服务器的IP
 ssh root@10.127.89.177
 
 #进入/opt目录
