@@ -57,7 +57,7 @@ cleos wallet unlock -n mywallet --password PW5JVNHZJmiapNvNSZM69bGw8z8ayEkSngfCu
 Unlocked: mywallet
 ```
 
-6.准备一个EOS账号，用于注册节点，例如：yasyaspoolbp
+6.准备一个YAS账号，用于注册节点，例如：yasyaspoolbp
 
 7.生成一对公私钥，用于注册节点，注意注册节点的公钥私钥，不要使用注册节点账号的公钥私钥：
 
