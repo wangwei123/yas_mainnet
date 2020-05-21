@@ -57,7 +57,19 @@ cleos wallet unlock -n mywallet --password PW5JVNHZJmiapNvNSZM69bGw8z8ayEkSngfCu
 Unlocked: mywallet
 ```
 
-6.准备一个YAS账号，用于注册节点，例如：yasyaspoolbp
+6.注册一个YAS账号，用于注册节点，例如：
+
+```shell
+账号：yasyaspoolbp
+公钥: EOS4zEf7K8UByukZB4nBDNNPjGthHUUN9GSa3T71nD7xyv81wQhAVz
+私钥: j6F2yz92sS2x39cu4icvjUYsohasf3HKASDF83sifhsdj2242324fjsf23
+
+# 将yasyaspoolbp的私钥导入钱包
+cleos wallet import -n mywallet --private-key j6F2yz92sS2x39cu4icvjUYsohasf3HKASDF83sifhsdj2242324fjsf23
+
+#打印如下内容表示导入成功
+imported private key for: EOS4zEf7K8UByukZB4nBDNNPjGthHUUN9GSa3T71nD7xyv81wQhAVz
+```
 
 7.生成一对公私钥，用于注册节点，注意注册节点的公钥私钥，不要使用注册节点账号的公钥私钥：
 
@@ -67,18 +79,15 @@ cleos create key --to-console
 #生成结果如下，请妥善保存
 Private key: 5Jnsi2kW1XcU2Ee8yoKvtcbGumLt7pcj2AJoopLVsgSDHsbMRNx
 Public key: EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
-```
 
-8.将上面步骤5生成的私钥导入钱包：
-
-```shell
+#将上面生成的私钥导入钱包
 cleos wallet import -n mywallet --private-key 5Jnsi2kW1XcU2Ee8yoKvtcbGumLt7pcj2AJoopLVsgSDHsbMRNx
 
 #打印如下内容表示导入成功
 imported private key for: EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
 ```
 
-9.修改start_node.sh脚本，把你在步骤6准备的节点账号，步骤7准备公钥私钥填写到脚本中:
+8.修改start_node.sh脚本，把你在步骤6准备的节点账号，步骤7准备公钥私钥填写到脚本中:
 
 ```shell
 #进入yas_mainnet目录
@@ -101,7 +110,7 @@ provider_privatekey="节点私钥"
 cat start_node.sh
 ```
 
-10.启动start_node.sh脚本，开始同步区块数据: 
+9.启动start_node.sh脚本，开始同步区块数据: 
 
 ```shell
 # 执行命令启动节点运行:
@@ -131,10 +140,14 @@ tail -f nodeos.log
 }
 ```
 
-11.注册节点，提供你的节点账号和节点公钥即可：
+10.注册节点，提供你的节点账号和节点公钥即可：
 
 ```shell
 #执行如下命令注册bp:
 cleos system regproducer yasyaspoolbp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
+
+#如果节点没开启http api，可使用麦子钱包节点api注册bp:
+cleos -u https//yas.maiziqianbao.net system regproducer yasyaspoolbp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
+
 ```
 
