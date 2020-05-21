@@ -147,7 +147,7 @@ tail -f nodeos.log
 cleos system regproducer yasyaspoolbp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
 
 #如果节点没开启http api，可使用麦子钱包节点api注册bp:
-cleos -u https//yas.maiziqianbao.net system regproducer yasyaspoolbp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
+cleos -u https://yas.maiziqianbao.net system regproducer yasyaspoolbp EOS8QNrqooxe62RUgRxNmj3M75ZV8tpgktQ2rCc9tfM57jwfrm1iQ
 
 ```
 
